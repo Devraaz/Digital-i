@@ -1,0 +1,326 @@
+{% extends 'base.html' %}
+{% block title %}Eaglei{% endblock title %}
+
+{% block head %}
+ 
+            
+
+<style>
+.card {
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    }
+    
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+    box-shadow: 10px 10px 50px grey;
+    }
+    .price{
+        font-size: 18px;
+        width: 85%;
+        margin: auto;
+        text-align: center;
+
+    }
+    .test{
+        border-radius: 50%;
+        width: 200px;
+        height: auto; 
+        float: left; 
+        margin: auto;
+        padding: 10px 10px; 
+        
+
+    }
+    .contactus{
+        width: 100%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.75);
+        height: auto;
+        color: white;
+        padding: 20px;
+    
+    }
+    .input{
+        margin: 2px;
+    }
+    button{
+        background-image: linear-gradient(to bottom right, #e43cf0,orange, #a7eb42); 
+        box-shadow: 0 2px 5px 0 white;
+        color: black;
+    }
+    button:hover{
+        
+    box-shadow: 0 5px 19px 1px white;
+    }
+    .logo{
+        animation: rotat 8s 1;
+    }
+
+    @keyframes rotat{
+        0%{ transform: rotate(0deg);}
+        20%{ transform: rotate(0deg);}
+        40%{ transform: rotate(1440deg);}
+        60%{ transform: rotate(1440deg);}
+        80%{ transform: rotate(0deg);}
+        100%{ transform: rotate(0deg);}
+    }
+
+    @media only screen and (max-width: 450px) {
+        h2{
+            font-size: 25px;
+        }
+        .card-body{
+            font-size: 15px;
+        }
+        .test{
+            width: 80px;
+            heigth: auto;
+
+        }
+        .h-t{
+            font-size: 15px;
+        }
+        .h-b{
+            font-size: 12px;
+            padding: 1px 1px;
+        }
+    }
+</style>
+
+{% endblock head %}
+
+{% block body %}
+
+{% for message in messages %}
+    <div class="alert alert-success alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> {{ message }}</strong> 
+    </div>
+{% endfor%}
+<a class="navbar-brand" style='position: absolute ;z-index: 99; font-size: 25px; 
+            padding: 10px 15px;right: 20px;  color: black' href='login'/>Login</a>
+<div class='bdy' style="">
+
+    <p class='intro' data-aos="fade-right">
+        <img src='static/logo.png' class='logo' >
+        <br><br><br><br>
+        <strong >Digital-I</strong><br>
+        <i> India's fastest growing Digital Marketing Agencies</i>
+    
+    </p>
+    
+</div>
+<br><br>
+
+<div class='flex-container' style='overflow: hidden;'>
+    <h1 style='text-align: center;'><i> SERVICES WE PROVIDE </i></h1>
+
+    <br><br>
+    <div class='flex-container'>
+        <div class='row' style="padding: 20px;" >
+            <div class='card col-sm-3' style=' text-align: center; ' data-aos="fade-left">
+                <img src='static/seo.gif' style='width: 80%; padding: 10px; margin: auto;'>
+                <div class='card-body'> <h2>Search Engine Optimization </h2>
+                    <p> Search engine optimization (SEO) is the art and science
+                         of getting pages to rank higher in search engines such as Google.
+                          Because search is one of the main ways in which people discover 
+                          content online, ranking higher in search engines can lead to an 
+                          increase in traffic to a website.
+                    </p>
+                </div>
+            </div>
+            <div class='card col-sm-3' style='border: none; text-align: center; 'data-aos="fade-down">
+                <img src='static/sem.gif' style='width: 80%; padding: 10px; margin: auto;'>
+                <div class='card-body'> <h2>Search Engine Marketing </h2>
+                    <p> Search engine marketing (SEM) is a form of Internet 
+                        marketing that involves the promotion of websites by 
+                        increasing their visibility in search engine results 
+                        pages (SERPs) primarily through paid advertising.
+                    </p>
+                </div>
+            </div>
+            <div class='card col-sm-3' style='border: none; text-align: center; ' data-aos="fade-right">
+                <img src='static/smo.gif' style='width: 80%; padding: 10px; margin: auto;'>
+                <div class='card-body'> <h2>Social Media Optimization </h2>
+                    <p> Social media optimization (SMO) is the use of social media 
+                        networks to manage and grow an organization’s message and 
+                        online presence. As a digital marketing strategy, social 
+                        media optimization can be used to increase awareness of new 
+                        products and services.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class='row' style="padding: 20px;">
+            <div class='card col-sm-3' style=' text-align: center;' data-aos="fade-right">
+                <img src='static/sm.gif' style='width: 80%; padding: 10px; margin: auto;'>
+                <div class='card-body'> <h2>Social Media Marketing </h2>
+                    <p> Social media marketing (SMM) (also known as digital 
+                        marketing and e-marketing) is the use of social media—the 
+                        platforms on which users build social networks and share 
+                        information—to build a company's brand, increase sales, 
+                        and drive website traffic.
+                    </p>
+                </div>
+            </div>
+            <div class='card col-sm-3' style=' text-align: center; ' data-aos="fade-down">
+                <img src='static/em.gif' style='width: 80%; padding: 10px; margin: auto;'>
+                <div class='card-body'> <h2>Email Marketing </h2>
+                    <p> Email marketing is the act of sending a commercial message, 
+                        typically to a group of people, using email. In its broadest 
+                        sense, every email sent to a potential or current customer 
+                        could be considered email marketing. It involves using email 
+                        to send advertisements, request business, or solicit sales or donations.
+                    </p>
+                </div>
+            </div>
+            <div class='card col-sm-3' style='border: none; text-align: center; ' data-aos="fade-left">
+                <img src='static/cm.gif' style='width: 80%; padding: 10px; margin: auto;'>
+                <div class='card-body'> <h2>Content Marketing </h2>
+                    <p> Content marketing is a marketing strategy used to attract, 
+                        engage, and retain an audience by creating and sharing 
+                        relevant articles, videos, podcasts, and other media. 
+                        This approach establishes expertise, promotes brand awareness, 
+                        and keeps your business top of mind when it's time to buy what you sell.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</div>
+
+<br><br>
+<hr>
+<div class='container'>
+    <h1 style='text-align: center;'><i>PRICING </i></h1>
+    <br><br>
+    <p class='price'>
+        Are you searching for Digital Marketing Packages but not sure how much does 
+        digital marketing cost actually? You have come to the right place. Here you 
+        can learn about digital marketing services and how much do digital marketing
+         packages cost in India. Let’s dive right in to know how much does digital 
+         marketing costs in India in 2022 per month .
+    </p>
+    <br>
+    <div style="overflow-x: scroll;">
+        <table class="table table-dark" >
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">SEO</th>
+                <th scope="col">SEM</th>
+                <th scope="col">SMO</th>
+                <th scope="col">SMM</th>
+                <th scope="col">Email-Marketing</th>
+                <th scope="col">Content-Marketing</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Basic</th>
+                <td>3,000</td>
+                <td>2,500</td>
+                <td>15,000</td>
+                <td>30,000</td>
+                <td>4,500</td>
+                <td>8,000</td>
+            </tr>
+            <tr>
+                <th scope="row">Premium</th>
+                <td>20,000</td>
+                <td>18,000</td>
+                <td>22,000</td>
+                <td>45,000</td>
+                <td>60,000</td>
+                <td>30,000</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<br><br>
+<div class='flex-container'>
+    <h1 style='text-align: center;'><i>TESTIMONALS </i></h1>
+    <br><br>
+
+    <div class='container' style='margin: auto;'>
+        
+        <div class='rect' data-aos="fade-down-right">
+            <img src='static/avt1.png' class='test' style=''>
+            <br>
+            <h2 class='h-t'> Mr Samir Kumar</h2>
+            <h4 class='h-b'> One of the best experience and growth I had after joining Eagle-i</h4>
+        </div>
+
+        <div class='rect' data-aos="fade-down-right">
+            <img src='static/avt1.png' class='test' style=''>
+            <br>
+            <h2 class='h-t'> Mr Akash Ranjan</h2>
+            <h4 class='h-b'> Touching sky is just the begining of this Agencies. Thanks Eagle-i</h4>
+        </div>
+
+    </div>
+
+
+    
+</div>
+
+<br><br>
+<div class='flex-container'>
+    <h1 style='text-align: center;'><i>CONTACT US </i></h1><br>
+    <div class='row contactus'>
+        <div class='col-sm-6'>
+           <h3> About Us</h3><br>
+           <p style='width: 80%;'> We are one the most trustable and growing Digital Marketing Agencies 
+            performing at its peak to give your company the most valuable and scalable 
+            audiance.We use the Internet and online based digital technologies such as desktop 
+            computers, mobile phones and other digital media and platforms to promote products and services
+           </p>
+           <hr style='background-color: white;'>
+           <a class="fa fa-phone" aria-hidden="true" href='tel:9439762002' style='color: white'> &nbsp;&nbsp;+91 9439762002</a><br><br>
+           <a class="fa fa-envelope" aria-hidden="true" href='mailto:swadhinraj2000@gmail.com' style='color: white'>&nbsp;&nbsp; swadhinraj2000@gmail.com</a>
+           <br><br>
+        </div>
+        
+        <div class='col-sm-6'>
+            <h3>Enquiry</h3><br>
+            <form method='POST'>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name" name='fname' required>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name" name='lname'>
+                    </div>
+                </div><br>
+                <div class='row'>
+                    <div class='col-sm-6'>
+                        <input type='email' class='from-control' placeholder='EMAIL' name='email' required>
+                    </div>
+                </div></br>
+                <div class='row'>
+                    <div class='col-sm-8'>
+                        <input type='text-area' class='form-control' placeholder='Message' name='message' required>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-secondary" style=''>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+</div>
+
+
+{% endblock body %}

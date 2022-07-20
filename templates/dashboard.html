@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Dashboaard{% endblock title %}
+{% block head %}
+
+{% endblock head %}
+
+{% block body %}
+
+<h2 style='text-align: center;'>EAGLE-I BACKOFFICE</h2>
+
+<div class='container'>
+    <a href='logout' style='text-align: right;'><h5>Logout</h5></a>
+    <h2> Enquiry Table</h2>
+    <br>
+    <div class='container table-responsive'>
+        <table class='table'>
+            <thead class='thead-dark'>
+                <tr>
+                    <th scope='col-sm-3'>Name</th>
+                    <th scope='col-sm-3'>Email</th>
+                    <th scope='col-sm-6'>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data  %}
+                <tr>
+                    <td>{{d.fname}}</td>
+                    <td>{{d.email}}</td>
+                    <td>{{d.message}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+    </div>
+
+    
+</div>
+
+{% endblock body %}
